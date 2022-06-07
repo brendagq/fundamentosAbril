@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#contenedor-principal{
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.texto-mayusculas{
+    text-transform: uppercase;
+}
+
+button{
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    border: 2px solid darkcyan;
+    outline: none;
+}
+
+.btn-principal{
+    background-color: darkcyan;
+    color: white;
+}
+
+.btn-secundario{
+    background-color: transparent;
+}
+
+.toast{
+    position: absolute;
+    width: 50vw;
+    background-color: tomato;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    bottom: 80px;
+    left: 25%;
+    display: none;
+}
+
+.toast.mostrar{
+    display: block;
+}

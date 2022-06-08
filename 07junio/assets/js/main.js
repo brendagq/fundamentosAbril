@@ -117,20 +117,118 @@ const usuarios = [
 
 */
 
+
+/*CREACION DE ELEMENTOS HTML */
+
+/* document.createElement( "tagname" ) */
+/*
+let parrafo = document.createElement( "p" )
+parrafo.textContent = "Texto"
+
+let body = document.querySelector( "body" )
+*/
+/*
+    Agregar un elemento al DOM 
+    nodoPadre.appendChild( nodoHijo )
+*/
+/*
+body.appendChild( parrafo )
+
+let titulo = document.createElement( "h1" )
+let texto = document.createTextNode("Este es un titulo")
+*/
+/* Agrega un nuevo primer hijo al elemento que usamos como referencia
+
+nodoPadre.prepend( nodoPrimerHijo )
+*/
+/*
+titulo.appendChild( texto )
+console.log( titulo )
+
+let section = document.querySelector( "section" )
+
+section.prepend( titulo )
+
+let image = document.createElement("img")
+image.src = "https://picsum.photos/200/300"
+*/
+/*
+    insertAdjacentElement
+    Inserta un elemento en una posicion especifica respecto al elemento de referencia
+
+    "beforebegin": Hermano adyacente previo
+    "afterened": Hermano adyacente posterior
+*/
+
+//section.insertAdjacentElement( "beforebegin", image )
+//section.insertAdjacentElement( "afterend", image )
+
+
+/* ELIMINACION DE NODOS 
+
+    nodoPadre.removeChild( "nodoAEliminar" )
+*/
+
+//image.parentNode.removeChild( image )
+
+
 const mascotas = [
     {
         nombre: "Canela",
         especie: "Gato",
-        url: "../images/canelita.jpeg"
+        url: "./assets/images/canelita.jpeg"
     },
     {
         nombre: "Aurora",
         especie: "Gato",
-        url: "../images/aurora.jpeg"
+        url: "./assets/images/aurora.jpeg"
     },
     {
         nombre: "Juno",
         especie: "Gato",
-        url: "../images/juno.jpeg"
+        url: "./assets/images/juno.jpeg"
     },
 ]
+
+
+let contenedor = document.querySelector( "section.contenedor-mascotas" )
+/*
+let fragmento = new DocumentFragment
+
+for (let i = 0; i < mascotas.length; i++) {
+
+    let div = document.createElement("div")
+    div.classList.add( "mascota-card" )
+    let img = document.createElement("img")
+    img.src = mascotas[i].url
+    
+    let h3 = document.createElement("h3")
+    h3.textContent = mascotas[i].nombre
+    
+    let small = document.createElement("small")
+    small.textContent = mascotas[i].especie
+    
+    div.appendChild(img)
+    div.appendChild(h3)
+    div.appendChild(small)
+    
+    fragmento.appendChild( div )
+}
+
+contenedor.appendChild( fragmento )
+*/
+
+let fragmentoInnerHTML = ""
+
+for( let gato of mascotas ){
+
+    fragmentoInnerHTML += `
+        <div class="mascota-card">
+            <img src=${gato.url} alt="">
+            <h3>${ gato.nombre }</h3>
+            <small>${gato.especie}</small>
+        </div>
+    ` 
+}
+
+contenedor.innerHTML = fragmentoInnerHTML

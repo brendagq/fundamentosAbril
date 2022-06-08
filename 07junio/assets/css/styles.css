@@ -57,3 +57,18 @@ h1{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+
+
+.contenedor-mascotas{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.mascota-card{
+    background-color: wheat;
+}
+.contenedor-mascotas img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}

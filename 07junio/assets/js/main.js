@@ -58,7 +58,7 @@ const usuarios = [
     -Si la funcion recibe SOLAMENTE un parametro, podemos omitir los parentesis
 
     const saludarUsuario = nombre =>{
-         return `Hola ${nombre}! Bienvenidx a Academlo.` 
+        return `Hola ${nombre}! Bienvenidx a Academlo.` 
     } 
 
     -Podemos llevar a cabo un return impilicito
@@ -89,7 +89,7 @@ const usuarios = [
 
     function obtenerNombre( callback ){
         let nombreIngresado = prompt("Ingresa tu nombre")
-        callback(nombreIngresado)
+        callback(nombreIngresado) // saludarUsuario(nombreIngresado)
     }
 
     obtenerNombre(saludarUsuario)
@@ -232,3 +232,43 @@ for( let gato of mascotas ){
 }
 
 contenedor.innerHTML = fragmentoInnerHTML
+
+
+
+/* Crear con ayuda de nodos (createElment) y los metodos para agregar nodos ald DOM 
+
+un div con la siguiente estructura y la informacion correspondiente:
+ <div class="usuario-card">
+    <img src="https://picsum.photos/id/1005/200/300" alt="">
+    <h3>Fulanito Perez</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum sed id qui delectus possimus vitae.</p>
+    <button class="btn-eliminar">Eliminar</button>
+</div>
+
+Añadirlo dentro de un section con la clase "contenedor-usuarios"
+
+Repetir el proceso con cada uno de los elementos del arreglo usuarios
+*/
+
+/*
+const funcionAnonima = function ( a, b ){
+    return a + b
+};
+
+console.log( funcionAnonima( 5, 5 ) );
+
+( function(){
+    console.log( "Soy una funcion autoejecutada" )
+})()
+*/
+
+function saludarUsuario(nombre){
+    alert( `Hola ${nombre}! Bienvenidx a Academlo.` ) 
+}
+
+function obtenerNombre( callback ){
+    let nombreIngresado = prompt("Ingresa tu nombre")
+    callback(nombreIngresado) // saludarUsuario(nombreIngresado)
+}
+
+obtenerNombre(saludarUsuario)

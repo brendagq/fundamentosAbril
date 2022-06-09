@@ -3,7 +3,7 @@
 /* 
     MÉTODOS  DE ORDEN SUPERIOR
 */
-
+/*
 const usuarios = [
     {
         id: 0,
@@ -30,6 +30,7 @@ const usuarios = [
         imgUrl: "https://picsum.photos/id/342/200/300"
     },
 ]
+*/
 /*
 function imprimir(elemento) {
     console.log( elemento.nombre )
@@ -56,8 +57,9 @@ let retornoForEach = usuarios.forEach( (element) =>{
 contenedor.appendChild( fragment )
 console.log( retornoForEach )
 */
+/*
 let contenedor = document.getElementById("usuarios-contenedor")
-let fragment = new DocumentFragment()
+let fragment = new DocumentFragment
 
 let retornoMap = usuarios.map( (element, index, array) => {
     let h3 = document.createElement( "h3" )
@@ -69,3 +71,20 @@ let retornoMap = usuarios.map( (element, index, array) => {
 
 contenedor.appendChild( fragment )
 console.log( retornoMap )
+
+//Filtro, usuarios que su nombre empiece con F o A
+
+let retornoFilter = usuarios.filter( (elemento)=>{
+    let firstLetter = elemento.nombre[0]
+    return ( firstLetter === "F" || firstLetter === "M" )
+})
+
+console.log( retornoFilter )
+
+let retornoFind = usuarios.find( (elemento) => {
+    let firstLetter = elemento.nombre[0]
+    return ( firstLetter === "F" || firstLetter === "M" )
+})
+
+console.log( retornoFind )
+*/

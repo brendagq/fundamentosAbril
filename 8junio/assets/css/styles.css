@@ -62,3 +62,14 @@ main{
 .reactions{
     padding: 0 1rem;
 }
+
+
+.producto{
+    width: 300px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.producto img{
+    width: 100%;
+}

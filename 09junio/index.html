@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+
+    <button onclick="console.log('Fui clickeado');" ondblclick="alert( 'fueron dos clicks!!!' )">Click me!</button>
+
+    <input value="nothing" type="text" placeholder="Escribe tu nombre" onkeypress="inputChange()">
+
+    <textarea name="" id="comentario" cols="30" rows="10"></textarea>
+
+    <form id="formulario">
+        <input type="text" placeholder="escribe tu usuario" id="usuario">
+        <br>
+        <input type="password" name="" id="contraseña" placeholder="escribe tu contraseña" >
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

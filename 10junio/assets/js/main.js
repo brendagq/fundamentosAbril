@@ -52,6 +52,9 @@ console.log( stringVacio, JSON.parse( stringVacio ), typeof JSON.parse( stringVa
 
     ELIMINAR INFORMACION 
     window.localStorage.removeItem("nombreDelEspacio")
+
+    ELIMINAR **TODA** LA INFORMACION
+    window.localStorage.clear()  
 */
 
 window.localStorage.setItem( "usuarioData", JSON.stringify( {

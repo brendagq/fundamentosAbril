@@ -116,9 +116,6 @@ function mostrarProductos() {
         id: 2,
         quantitySelected: 1,
     },
-    {
-
-    } 
 ]
 
 */
@@ -132,11 +129,10 @@ Verificar si ya existe en el carrito
 */
 
 function agregarProducto( producto ){
-    cart.push(producto)
 
     let resultadoFind = cart.find( item => item.id === producto.id )
     resultadoFind = "actualizacion"
-    /*
+
     if( resultadoFind ){
         let stock = cart[resultadoFind.index].quantity
         let quantitySelected = cart[resultadoFind.index].quantitySelected
@@ -154,7 +150,6 @@ function agregarProducto( producto ){
 
         cart.push(producto)
     }
-    */
 
     console.log(cart)
     mostrarProductosCart()

@@ -40,6 +40,8 @@ let cartIcon = document.querySelector(".cart")
 let cartOverlay = document.querySelector(".shopping-cart-overlay")
 let cartClose = document.getElementById("cart-close")
 let listProducts = document.querySelector(".products-list")
+let cartContainer = document.querySelector(".cart-list")
+let cartCount = document.querySelector("#cart-count")
 let cart = []
 
 
@@ -80,7 +82,7 @@ function mostrarProductos() {
             <div class="product-image-container">
                 <img src=${product.image} alt="" class="product-img">
             </div>
-            <p>$15.00</p>
+            <p>$${product.price}</p>
             <button data-id="${product.id}" class="product-button">
                 <i class='bx bx-plus-circle bx-md'></i>
             </button>
@@ -101,10 +103,91 @@ function mostrarProductos() {
                 return item.id === id 
             })
             
-
-            cart.push( product )
-            console.log((cart))
+            agregarProducto(product)
+            // cart.push( product )
+            //console.log((cart))
         })
     })
 }
 
+/*
+[ 
+    {
+        id: 2,
+        quantitySelected: 1,
+    },
+    {
+
+    } 
+]
+
+*/
+/*
+Verificar si ya existe en el carrito
+    Si existe
+        Checar el stock
+        quantitySelected += 1
+    Si NO existe
+        Creo quantitySelected y asigno valor inicial 1
+*/
+
+function agregarProducto( producto ){
+    cart.push(producto)
+
+    let resultadoFind = cart.find( item => item.id === producto.id )
+    resultadoFind = "actualizacion"
+    /*
+    if( resultadoFind ){
+        let stock = cart[resultadoFind.index].quantity
+        let quantitySelected = cart[resultadoFind.index].quantitySelected
+
+        if( stock > quantitySelected ){
+            cart[resultadoFind.index].quantitySelected += 1
+        }else{
+            alert( "No tenemos suficiente inventario" )
+        }
+
+    }else{
+        producto.quantitySelected = 1
+        producto.index = cart.length
+
+
+        cart.push(producto)
+    }
+    */
+
+    console.log(cart)
+    mostrarProductosCart()
+}
+
+
+function mostrarProductosCart(){
+
+    let fragmentoHTML = ``
+    let suma = 0
+    let cantidadTotal = 0
+
+    cart.forEach( item =>{
+        fragmentoHTML += `
+        <div class="cart-item">
+            <img src=${item.image} alt="">
+            <p>${item.name}</p>
+            <small>Cantidad: ${item.quantitySelected}</small>
+        </div>
+        `
+
+        let totalProducto = item.quantitySelected * item.price 
+        suma += totalProducto
+
+        cantidadTotal += item.quantitySelected
+    })
+
+    fragmentoHTML += `
+    <div class="cart-price">
+        <p>Productos seleccionados:${ cantidadTotal }</p>
+        <p>$${ suma }</p>
+    </div>
+    `
+    cartContainer.innerHTML = fragmentoHTML
+    cartCount.textContent = cantidadTotal
+}

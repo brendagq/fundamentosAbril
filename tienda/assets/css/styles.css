@@ -189,6 +189,16 @@ footer{
 }
 
 
+.cart-item img{
+    width: 50px;
+}
+
+.cart-price{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
 
 
 @media screen and (min-width:768px) {

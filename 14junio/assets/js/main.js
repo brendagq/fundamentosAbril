@@ -41,3 +41,8 @@ fetch( "https://pokeapi.co/api/v2/", {
 //Generar formulario de registro
 // nombre, username, password
 //Fetch fake de tipo POST con esa informacion
+
+
+//Desestructuracion de objetos
+//Modulos
+//Asincronia

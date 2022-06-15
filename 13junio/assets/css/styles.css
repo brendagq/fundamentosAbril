@@ -47,3 +47,21 @@ form button{
     justify-content: center;
     align-items: center;
 }
+
+.toast{
+    width: 75vw;
+    position: absolute;
+    bottom: 80px;
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    left: 15vw;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    height: 60px;
+}
+
+.toast.mostrar{
+    display: flex;
+}

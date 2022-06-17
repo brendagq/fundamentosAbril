@@ -20,6 +20,350 @@
     box-sizing: border-box;
 }
 
+
+.section-home{
+    background-color: transparent;
+    min-height: 100vh;
+    padding: 4.5rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+}
+
+
+
+.store{
+    position: fixed;
+    left: 80px;
+}
+
+.card1    {
+    padding: 0.5rem;
+}
+
+
+
+/*card2*/
+
+.card2    {
+    padding: 0.5rem;
+}
+
+/*para que se  mire el carrito*/
+.cart-overlay{
+    width: 100vw;
+    min-width: 100vh;
+    height: 100%;
+    background-color: var(--body-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 50;
+}
+.cart-overlay.mostrar{
+    display: block;
+}
+
+.bx{ /* icono de X*/
+    position: fixed;
+    z-index: 50;
+    color: var(--first-color);
+    left: 440px;
+}
+
+
+.h5-titulo{
+   color: var(--title-color);
+   font-size: 16px;
+   position: fixed;
+   top: 10px;
+   right: 210px; 
+   padding: 0.5rem;
+}
+.h5-parrafo{
+   color: var(--title-color);
+   font-size: 16px;
+   position: fixed;
+   padding: 0.5rem;
+   right: 60px;
+   
+}
+
+
+/*card3*/
+
+
+.card3    {
+    padding: 0.5rem;
+    position: relative;
+    align-items: center;
+    left: 100px;
+    z-index: -1;
+}
+
+.opciones{
+    position:static ;
+    
+}
+div .showAll{
+    position: relative;
+    right: 210px;
+    text-align: center;
+    
+}
+.hoodies{ /*Letras*/
+    position: relative;
+    right: -10px;
+    top: -40px;
+    text-align: center;
+}
+.shirt{
+
+    position: relative;
+    right: 215px;    
+    text-align: center;
+
+}
+.sweatshirts{
+    position: relative;
+    right: -10px;
+    top: -40px;
+    text-align: center;
+
+}
+
+
+
+
+
+
+.img-card{
+    
+    display: block;
+    
+    
+}
+.img-card img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    background-color: lightgrey;
+    border-radius: 10px 10px 0 0;
+}
+.img-card button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 26px;
+    /*position: relative;*/
+    right: 40px;
+    background-color: yellow;
+    z-index: 10000;
+       
+    
+}
+
+.info-cart{
+    background-color: var(--text-color-light);
+    width: 250px;
+    height: 50px;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    top: -15px;
+    z-index: -1;
+}
+
+
+
+/* .hoodies-1 img{
+    width: 50px;
+} */
+
+
+/*card4*/
+
+.card4    {
+    padding: 0.5rem;
+    background-color: lightgrey;
+    border-radius: 50px 0 0 0;
+    text-align: center;
+}
+
+.infoGeneral{
+    padding: 0.5rem;
+    position: relative;
+    right: -10px;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+/*loader*/
+/*.loader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--container-color);
+    top: 0;
+    left: 0;
+    z-index: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loader img{
+    width: 10%;
+    position: relative;
+    animation: movimientoLoader 4s linear infinite ;
+}
+
+@keyframes movimientoLoader{
+    0%{
+        top: 0;
+    }
+    35%{
+        top: -10px;
+    }
+    70%{
+        top: 10px;
+    }
+    100%{
+        top:0; 
+    }
+}*/
+
+.iconos{
+    position: fixed;
+    left: 310px;
+    
+}
+
+.cart-count{ /*imagen carrito de compras*/
+    width: 1rem;
+    height: 1rem;
+    font-size: 10px;
+    background-color: var(--title-color);
+    color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: .25rem;
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+}
+
+.bag{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: -2px;
+}    
+
+.home-img{
+    width: 400px;
+    height: 450px;
+    background-color: transparent;
+}
+
+.producto-img {
+    background-color: var(--first-color);
+    width: 60%;
+    max-width: 350px;
+    position: absolute;
+    right: 0;
+    top: -4.5rem;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    border-radius: 0px 0px 50px;
+}
+
+.producto-img img{
+    width: 270px;
+    height: 270px;
+    object-fit: contain;
+}
+
+.botones{
+    display: flex;
+    position: static; 
+    
+    
+}
+.boton-discover{
+    margin: 5%;
+    padding: 15px;
+    padding-right: 25px;
+    padding-left:25px;
+    background-color: lightgrey;
+    display: inline-flex;
+    font-size: px;
+    border-radius: 0 5px 0 0;    
+    margin: 5%;
+    cursor: pointer;
+    text-decoration:none;
+    color: black;
+}
+
+.boton-add{
+    margin: 5%;
+    padding: 15px;
+    padding-right: 25px;
+    text-align: center;
+    padding-left:25px;
+    color: #fff;    
+    background-color: var(--button-color);
+    font-size: 18px;
+    border-radius: 5px 0 0 0;
+    cursor: pointer;
+    text-decoration: none;
+    
+
+
+}
+
+/*este es para mostrar en el cart una vez que seleccione los productos*/
+
+.cart-item{
+    background-color: #fff;
+}
+
+
+
+
+/******************************/
+/*menu hamburguesa*/
+.navbar{
+    
+    background-color:transparent ;
+    display: flex;
+    /*position: fixed; /*esto es nuevo en la vab*/
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1.5rem;
+    height: 60px;   /*Esta se le dio para que el menu hamburguesa no se pierda */
+    cursor: pointer;
+    
+}
+.img-menu {
+    /*position: relative;*/
+    position: fixed;
+    display: block;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+}
+
+
 img{
     max-width: 100%;
 }
@@ -213,6 +557,7 @@ footer{
         height: 100vh;
     }
 }
+
 @media  screen and (min-width:992px) {
     .nav-container{
         padding: .25rem 7.5rem .25rem 2rem;

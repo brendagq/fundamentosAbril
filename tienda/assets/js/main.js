@@ -44,36 +44,29 @@ let cartContainer = document.querySelector(".cart-list")
 let cartCount = document.querySelector("#cart-count")
 let cart = []
 
-
-
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded" , () =>{
     mostrarProductos()
+
 })
 
-cartIcon.addEventListener( "click", () =>{
+cartIcon.addEventListener("click", () =>{
     cartOverlay.classList.add("mostrar")
+
 })
 
-cartClose.addEventListener( "click", () =>{
+cartClose.addEventListener("click", () =>{
     cartOverlay.classList.remove("mostrar")
 })
 
 
-/* nav en el scroll */
+
+/*Funciones */
 
 
-let header = document.querySelector("header")
-
-window.addEventListener( "scroll", () =>{
-    if( window.scrollY > 60 ){
-        header.classList.add("scroll-header")
-    }else{
-        header.classList.remove("scroll-header")
-    }
-})
+/*----------------------MOSTRAR PRODUCTO----------------------------------------------- */
 
 
-function mostrarProductos() {
+function mostrarProductos(){
     let fragmentHTML = ""
 
     items.forEach( (product) =>{
@@ -85,6 +78,7 @@ function mostrarProductos() {
             <p>$${product.price}</p>
             <button data-id="${product.id}" class="product-button">
                 <i class='bx bx-plus-circle bx-md'></i>
+                button
             </button>
         </div>
         `
@@ -98,16 +92,48 @@ function mostrarProductos() {
 
     productsButton.forEach( (button) =>{
         button.addEventListener("click", (evento) =>{
+            console.log( "click" )
             let id = parseInt( button.getAttribute("data-id") )
             let product = items.find( item =>{ 
                 return item.id === id 
             })
             
-            agregarProducto(product)
+            //agregarProducto(product)
             // cart.push( product )
             //console.log((cart))
         })
     })
+    
+}
+
+
+/*----------------------AGREGAR PRODUCTO----------------------------------------------- */
+
+
+function agregarProducto( producto ){
+ 
+    let resultadoFind = cart.find( item => item.id === producto.id )
+    //resultadoFind = "actualizacion"
+
+    if( resultadoFind ){
+        let stock = cart[resultadoFind.index].quantity
+        let quantitySelected = cart[resultadoFind.index].quantitySelected
+
+        if( stock > quantitySelected ){
+            cart[resultadoFind.index].quantitySelected += 1
+        }else{
+            alert( "No tenemos suficiente inventario" )
+        }
+
+    }else{
+        producto.quantitySelected = 1
+        producto.index = cart.length
+
+
+        cart.push(producto)
+    }
+
+    console.log(cart)
 }
 
 /*
